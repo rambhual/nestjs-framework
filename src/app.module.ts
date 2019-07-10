@@ -17,7 +17,7 @@ import { UserModule } from './user/user.module';
       port: 5432,
       username: 'postgres',
       password: 'plumtree',
-      database: 'discovery',
+      database: 'northwind',
       logging: true,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
