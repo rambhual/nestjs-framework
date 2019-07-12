@@ -3,12 +3,16 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { IdeaEntity } from './idea.entity';
 import { IdeaDto } from './idea.dto';
+import { UserEntity } from '../user/user.entity';
 
 @Injectable()
 export class IdeaService {
   constructor(
     @InjectRepository(IdeaEntity)
     private ideaRepository: Repository<IdeaEntity>,
+
+    @InjectRepository(UserEntity)
+    private userRepository: Repository<UserEntity>,
   ) {}
 
   async GetAll() {
